@@ -1,0 +1,170 @@
+@import '../colors/colors.scss';
+
+.about-us-main{
+    height: auto;
+    background-image: url(../images/brownbackground.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    .about-back{
+        padding: 40px;
+        a{
+        @extend %quicksand;
+        @extend %shadow-basic;
+        background-color: transparent;
+        text-decoration: none;
+        border: 1px solid $secondary-cream;
+        color: $secondary-cream;
+        padding: 10px;
+        border-radius: 15px;
+        font-weight: 200;
+        transition:  1s ease;
+        &:hover{
+            background-color: transparent;
+            color: black;
+            font-size: 20px;
+            background-color: $secondary-cream;
+            @extend %zoom;
+        }
+    }
+    }
+}
+.about-container{
+    height: 130vh;
+    .about-us-title{
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        .h1-line{
+            background-color: $secondary-cream;
+            height: 2px;
+            width: 70%;
+            z-index: 1000;
+        }
+        h1{
+            font-family: sans-serif;
+            white-space: nowrap;
+            font-size: 180px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+        
+    }
+    .about-child{
+        height: 80%;
+        width: 80%;
+        background-color: transparent;
+        .about-image-container{
+            width: 50%;
+            .about-image{
+            background: url(../images/team-about.jpg);
+            background-size: cover;
+            background-position: center right;
+            height: 100%;
+            width: 100%;
+        }
+        }
+        .about-paragraph{
+            text-align: start;
+            height: auto;
+            max-height: 1000px;
+            max-width: 600px;
+            .line-cream{
+                width: 300px;
+                height: 2px;
+                background-color: $secondary-cream;
+            }
+            .decoration-square{
+                margin-top: 200px;
+                height: 10px;
+                width: 120px;
+                background-color: $secondary-cream;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-back{
+        padding: 20px !important;
+    }
+
+    .about-us-title{
+        top: 25% !important;
+        h1{
+            font-size: 70px !important;
+        }
+    }
+    .about-us-main{
+        padding: 30px;
+    }
+        .about-child{
+            justify-content: center !important;
+            flex-direction: column !important;
+            width: 95% !important;
+            height: 95% !important;
+            gap: 100px !important;
+        }
+        .about-paragraph{
+        text-align: center;
+        width: 100% !important;
+        height: auto;
+    }
+    .about-image-container{
+        width: 100% !important;
+        .about-image{
+        height: 400px !important;
+        width: 100% !important;
+    }
+    }
+    .decoration-square{
+        display: none;
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-width: 990px) {
+    .about-us-title{
+        top: 65% !important;
+    }
+    .about-container{
+        height: auto;
+    }
+    .about-child{
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .line-cream{
+        width: 200px !important;
+    }
+}
+
+@media (max-width: 1600px) and (min-width: 991px) {
+    .about-us-title{
+        h1{
+            font-size: 130px !important;
+        }
+    }
+    .about-image-container{
+        width: 80% !important;
+        margin-right: 100px;
+    }
+    .about-image{
+            background: url(../images/team-about.jpg);
+            background-size: cover;
+            background-position: left center !important;
+        }
+  
+  
+    .about-text {
+      width: 80% !important; 
+    }
+  
+    .about-title {
+      font-size: 50px !important;
+    }
+  }
+
+  

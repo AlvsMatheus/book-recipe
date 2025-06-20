@@ -1,0 +1,49 @@
+@import '../src/colors/colors.scss';
+
+.error-container{
+    height: 70%;
+    .error-element{
+        @extend %shadow-basic;
+        background-color: $terciary-brown;
+        width: 70%;
+        .oops{
+            @extend %quicksand;
+            color: white;
+            font-size: 35px;
+            text-align: center;
+            padding-left: 20px;
+        }
+        .error-cat{
+            background-image: url(../src/images/scared-cat.png);
+            background-size: cover;
+            width: 260px;
+            height: 260px;
+        }
+     .error-type{
+            padding-left: 65px;
+            color: white;
+            font-weight: 700;
+            color: $primary-pink;
+        }
+    }
+    
+} 
+.error-others{
+        margin-top: 150px;
+        width: 100%;
+
+    }
+
+@media screen and (max-width:768px) {
+    .oops{
+        padding-top: 20px;
+        font-size: 20px !important;
+    }
+    .error-cat{
+        background-image: url(../src/images/scared-cat.png);
+        background-size: cover;
+        width: 250px !important;
+        height: 140px !important;
+    }
+   
+}

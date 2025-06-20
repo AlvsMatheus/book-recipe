@@ -1,0 +1,84 @@
+@import '../colors/colors.scss';
+
+
+.footer-container{
+    height: 60dvh;
+    width: 100%;
+    background-color: $brown-light;
+}
+
+
+.footer-links{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    height: 50%;
+    width: 80%;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    border-bottom: 2px solid rgba(255, 149, 149, 0.507);
+}
+
+.links{
+    display: flex;
+    flex-flow: column nowrap;
+    a{
+        @extend %quicksand;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+    a:hover{
+        color: rgba(255, 149, 149, 0.815);
+        text-decoration: underline;
+    }
+}
+
+.contacts{
+    height: 30%;
+    color: white;
+}
+
+.logo{
+    background-image: url(../images/logo-cupcake.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+
+@media screen and (max-width:460px) {
+    
+    .footer-links{
+        width: 90%;
+        gap: 20px;
+    }
+    .links{
+        font-size: 14px;
+        gap: 2px;
+    }
+    .logo{
+        background-image: url(../images/logo-cupcake.png);
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (orientation:landscape) and (max-height: 460px) {
+    .footer-links{
+        width: 90%;
+        gap: 20px;
+    }
+    .links{
+        font-size: 14px;
+        gap: 2px;
+    }
+    .logo{
+        background-image: url(../images/logo-cupcake.png);
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+    }
+    
+}

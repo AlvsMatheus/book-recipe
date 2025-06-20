@@ -1,0 +1,257 @@
+@import '../colors/colors.scss';
+@import '../MySaves/MySaves.scss';
+
+@font-face {
+    font-family: 'recipe';
+    src: url(/fonts/biscuit_recipe/BiscuitRecipeDemo.otf) format('opentype');
+    }
+
+ .main-my-account{
+    background-image: url(../images/brownbackground.jpg);
+    background-size: cover;
+ }   
+
+    nav{
+        padding: 10px 20px 0px 0px;
+        width: 100%;
+        a{
+            @extend %quicksand;
+            @extend %shadow-basic;
+            background-color: transparent;
+            text-decoration: none;
+            border: 1px solid $secondary-cream;
+            color: $secondary-cream;
+            padding: 5px;
+            border-radius: 15px;
+            font-weight: 200;
+            transition:  1s ease;
+          }
+          a:hover{
+            background-color: transparent;
+            color: black;
+            font-size: 20px;
+            background-color: $secondary-cream;
+            transform: scale(1.0);
+          }
+    }
+
+.account-container{
+    background-color: $brown-light;
+    height: auto;
+    width: 100%;
+    .profile-container{
+        height: auto;
+        max-width: 600px;
+        min-width: 370px;
+        width: auto;
+        background-color: white;
+        margin-bottom: 150px;
+        border-radius: 15px;
+        .image{
+            background-image: url(../images/woman-photo.avif);
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.459); 
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+        }
+        .my-name{
+            text-align: center;
+            @extend %quicksand;
+            margin-top: 20px;
+            .line{
+                height: 1px;
+                width: 100px;
+                background-color: black;
+            }
+        }
+    }
+    .line{
+        height: 1px;
+        width: 100px;
+        background-color: black;
+    }
+    .myrecipes{
+        width: 90%;
+        min-height: 500px;
+        height: auto;
+        margin: 30px 0px 200px 0px;
+        background-color: $terciary-brown;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+        .myrecipes-title{
+        text-align: center;
+        font-family: 'recipe', sans-serif;
+        font-size: 50px;
+        padding-left: 20px;
+        color: $secondary-cream;
+        }
+    }
+}
+
+.below-profile{
+    margin-top: 50px;
+    padding: 30px;
+    .profile-link{
+        background-color: $secondary-cream;
+        box-shadow: 10px 10px 0px $terciary-brown;
+        border: 3px solid $terciary-brown;
+        background-size: cover;
+        width: 100%;
+        border-radius: 15px;
+        padding: 20px;
+        a{
+            @extend %quicksand;
+            text-decoration: none;
+            font-weight: 700;
+            color: $terciary-brown;
+            &:hover{
+                color: $primary-pink;
+            }
+        }
+    }
+}
+
+.about-me{
+    background-color: white;
+    height: auto;
+    min-height: 450px;
+    max-height: 700px;
+    width: auto !important;
+    border-radius: 15px;
+    h1{
+        @extend %quicksand;
+    }
+    p{
+        width: 500px;
+    }
+    .hat{
+        background-image: url(../images/hat-two.png);
+        background-size: cover;
+        width: 170px;
+        height: 150px;
+    }
+    .about-me-text{
+        min-height: 150px;
+        max-width: 500px;
+        background-color: $secondary-cream;
+        border-radius: 15px;
+        box-shadow: 10px 10px 0px $terciary-brown;
+        border: 3px solid $terciary-brown;
+        p{
+            @extend %quicksand;
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+
+        }
+    }
+    ul{
+       li{
+        list-style-type: disc;
+       }
+       span{
+        @extend %quicksand;
+        font-weight: 700;
+    }
+}
+}
+
+.myrecipes{
+    max-width: 1000px;
+}
+.my-list-container{
+    max-width: 1000px;
+    display: grid;
+    height: auto;
+    margin: 0 auto;
+    justify-items: center;
+    padding: 30px 0px 0px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 2rem;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .my-list{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 0px 1000px rgba(0, 0, 0, 0.24);
+        transition: 0.6s ease;
+        &:hover{
+            @extend %zoom;
+        }
+        .list-recipe-container{
+            @extend %quicksand;
+            margin-top: 90px;
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 1px black;
+            font-weight: 700;
+            color: white;
+        }
+        .my-list-author{
+            @extend %quicksand;
+            font-weight: 700;
+            color: $secondary-cream;
+            border: 1px solid $secondary-cream;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            padding: 5px;
+            font-size: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .profile-container{
+        margin-bottom: 0px !important;
+}
+    .my-list-container{
+    display: grid;
+    min-height: 500px;
+    width: 90%;
+    justify-items: center;
+    align-items: center;
+    padding: 30px 0px 0px 20px;
+    grid-template-columns: 1fr !important;
+    grid-gap: 50px;
+    overflow: auto;
+}
+}
+    .about-me{
+        width: auto;
+        padding: 20px;
+}
+    .about-me-text{
+        width: auto;
+        padding: 20px;
+        p{
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            width: auto;
+
+        }
+}
+
+@media screen and (orientation: landscape) and (max-height:412px) {
+    .profile-container{
+        width: auto !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .about-me{
+        background-color: white;
+        height: auto;
+        min-height: 450px;
+        max-height: 700px;
+        width: 1500px !important;
+        border-radius: 15px;
+    }
+}

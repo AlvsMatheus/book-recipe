@@ -1,0 +1,248 @@
+@import '../colors/colors.scss';
+
+@font-face {
+  font-family: 'recipe';
+  src: url(/fonts/biscuit_recipe/BiscuitRecipeDemo.otf) format('opentype');
+  }
+
+body {
+    font-family: 'MinhaFonte', sans-serif;
+    margin: 0px;
+  }
+.header-navbar{
+    min-height: 60dvh;
+    height: auto;
+    width: 100%;
+    background: url(/images/42433.jpg) no-repeat right top/cover;
+    box-shadow: inset 0 0 0 2000px rgba(17, 6, 1, 0.493);
+    
+    nav{
+      height: 80px;
+      width: 100%;
+      background-color: transparent;
+      padding: 40px 0px 0px 50px;
+    }
+    
+  }
+  .hamburguer-container{
+    display: none;
+  }
+  .hamburguer{
+    display: none;
+  }
+.recipe {
+    font-family: 'recipe', sans-serif;
+    font-size: 6rem;
+    color: $secondary-cream;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+li{
+    list-style: none;
+    .link-nav{
+      @extend %quicksand;
+      @extend %shadow-basic;
+      background-color: transparent;
+      text-decoration: none;
+      border: 1px solid $secondary-cream;
+      color: $secondary-cream;
+      padding: 10px;
+      border-radius: 15px;
+      font-weight: 200;
+      transition:  1s ease;
+      &:hover{
+        background-color: transparent;
+        color: black;
+        font-size: 20px;
+        background-color: $secondary-cream;
+        @extend %zoom;
+      }
+      }
+    }
+
+.sign{ 
+  background-color: transparent;
+  border: 2px solid $secondary-cream;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.349);
+  height: auto;
+  width: 600px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding: 20px 0px;
+  .text-sign{
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgba(43, 42, 42, 0.671);
+    text-align: center;
+    font-weight: 100;
+  }
+  .text-sign-two{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: $secondary-cream;
+  }
+  .link-sign{
+      text-decoration: none;
+      color: black;
+      background-color: $secondary-cream;
+      padding: 20px;
+      border-radius: 18px;
+      font-weight: 700;
+      width: 120px;
+      text-align: center;
+      transition: 1s ease;
+  }
+  .link-sign:hover{
+    background-color: black;
+    color: $secondary-cream;
+    @extend %zoom;
+  }
+  .link-sign.up{
+    background-color: transparent;
+    color: white;
+    border:solid 1px white ;
+    font-weight: 700;
+  }
+  .link-sign.up:hover{
+    background-color: black;
+    color: $secondary-cream;
+  }
+  
+}
+
+.menu-overlay{
+  display: none;
+}
+
+@media screen and (max-width: 840px){
+
+  .hamburguer-container{
+    display: block;
+    background-color: transparent;
+  }
+  .hamburguer{
+    background-color: transparent;
+    border: none;
+    color: $secondary-cream;
+    display: block;
+  }
+  
+  .nav-container{
+    height: auto;
+    padding:20px !important;
+    margin-bottom: 100px !important;
+  }
+  .recipe{
+    margin: 0px;
+    font-size: 50px;
+    padding: 5px 190px 0px 0px ;
+  }
+  .navlinks{
+    display: none;
+  }
+  .sign-container{
+    padding:0px 80px 0px 20px;
+    margin-bottom: 100px;
+  }
+  .sign{
+    padding: 20px 15px;
+  }
+  .link-sign{
+    font-size: 13px;
+    padding: 15px 0px !important;
+    margin-bottom: 30px;
+  }
+
+  .menu-list{
+    height: 300px;
+    width: 300px;
+  }
+
+
+.menu-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Menu lateral */
+.menu-sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Começa fora da tela */
+  width: 250px;
+  height: 100%;
+  background: url(../images/candy-background-pc.png);
+  background-size: cover;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2),
+  inset 0px 0px 0px 1000px rgba(66, 32, 32, 0.438);
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+}
+
+.menu-sidebar.open {
+  left: 0; /* Desliza para dentro da tela */
+}
+
+.menu-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-sidebar ul li {
+  margin: 20px 0;
+}
+
+.menu-sidebar ul li a {
+  text-decoration:  underline $primary-pink;
+  font-size: 18px;
+  color: white;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.menu-sidebar ul li a:hover {
+  color: $primary-pink;
+}
+
+  
+  
+}
+
+@media screen and (max-height:450px) {
+  header{
+    height: 140dvh;
+  }
+
+  .nav-container{
+    height: auto;
+    padding: 0px 45px 0px 0px;
+  }
+  .recipe{
+    margin: 0px;
+    font-size: 50px;
+    padding: 5px 0px 0px 20px;
+  }
+  .sign-container{
+    padding:0px 80px 0px 20px;
+    margin-bottom: 100px;
+  }
+  .sign{
+    padding: 30px 15px;
+  }
+  
+  
+}

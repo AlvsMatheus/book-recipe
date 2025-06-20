@@ -1,0 +1,106 @@
+@import '../colors/colors.scss';
+
+.recipe-container{
+    width: 300px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.recipe-list{
+    @extend %shadow-basic;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: $white;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.recipe-list:hover{
+    background-color: $terciary-brown;
+    transition: 1s ease;
+    transform: scale(1.1)
+}
+
+.recipe-list:hover .how-cook{
+    @extend %quicksand;
+    font-size: 35px;
+}
+
+.recipe-list:hover .how-cook.name{
+    opacity: 0;
+}
+
+.button-details{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+.recipe-image{
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0px 0px 2000px rgba(0, 0, 0, 0.232);
+    transition: box-shadow 0.8s ease-in-out;
+    
+}
+
+.link{
+    text-decoration: none;
+}
+
+
+.how-cook{
+    @extend %quicksand;
+    text-align: center;
+    margin: 0px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 35px;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    
+}
+
+.author{
+    text-align: center;
+    margin: 0px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+}
+
+.recipe-save{
+    height: 20%;
+    width: 100%;
+    p{
+        margin:0px;
+    }
+}
+
+.author{
+    @extend %quicksand;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+
+    .profile-container{
+        flex: row !important;
+    }
+    
+    .recipe-list{
+        flex-direction: row !important;
+        width: 200px;
+        height: 200px;
+    }
+    .recipe-image{
+        flex-direction: row !important;
+    }
+    .how-cook-container{
+        flex-direction: row !important;
+    }
+}

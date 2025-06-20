@@ -1,0 +1,105 @@
+@import "../colors/colors.scss";
+
+.saved-container{
+    background-image: url(../images/brownbackground.jpg);
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 50px 0px 300px 0px;
+    .saved-h2{
+        @extend %quicksand;
+        color: $secondary-cream;
+        padding: 70px 0px 0px 35px;
+        width: 100%;
+        margin-bottom: 40px;
+        font-weight: 700;
+        .line-two{
+            background-color: $primary-pink;
+            height: 2px;
+            width: 70%;
+        }
+        .drop-container{
+            .drop{
+            background-color: $primary-pink;
+            height: 4px;
+            width: 4px;
+            border-radius: 100%;  
+        }
+        
+    }
+}
+
+.saved-list-container{
+    display: grid;
+    min-height: 500px;
+    width: 90%;
+    justify-items: center;
+    align-items: center;
+    padding: 30px 0px 0px 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .saved-list{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: inset 0px 0px 0px 1000px rgba(0, 0, 0, 0.24);
+        transition: 0.6s ease;
+        &:hover{
+            @extend %zoom;
+        }
+        .list-recipe-container{
+            @extend %quicksand;
+            margin-top: 90px;
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 1px black;
+            font-weight: 700;
+            color: white;
+        }
+        .saved-list-author{
+            @extend %quicksand;
+            font-weight: 700;
+            color: $secondary-cream;
+            border: 1px solid $secondary-cream;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            padding: 5px;
+            font-size: 10px;
+        }
+    }
+}
+}
+
+.delete{
+    padding: 3px;
+    width: 110px;
+    border-radius: 15px;
+    background-color: $primary-pink;
+    color: black;
+    border: none;
+    transition: 0.4s ease;
+    &:hover{
+        @extend %zoom;
+        background-color: rgb(252, 150, 150);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .saved-list-container{
+        display: grid;
+        min-height: 500px;
+        width: 90%;
+        justify-items: center;
+        align-items: center;
+        padding: 30px 0px 0px 20px;
+        grid-template-columns: 1fr !important;
+        grid-gap: 50px;
+        overflow: auto;
+    }
+}

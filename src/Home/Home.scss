@@ -1,0 +1,223 @@
+@import '../colors/colors.scss';
+
+@font-face {
+    font-family: 'recipe';
+    src: url(/fonts/biscuit_recipe/BiscuitRecipeDemo.otf) format('opentype');
+    }
+
+%h1-brown{
+    font-family: 'recipe', sans-serif;
+    margin: 0px;
+    font-size: 60px;
+    color: $terciary-brown; 
+}
+
+.main {
+    width: 100%;
+    box-shadow: inset 0px 0px 10px rgb(0,0,0,0.3);
+    background-color: $brown-light;
+    overflow: hidden;
+}
+
+.top-container{
+    width: 100%;
+    height: auto;
+    .top{
+        box-shadow: 0px 0px 119px rgba(0, 0, 0, 0.445) ;
+        background-color: $secondary-cream;
+        color: black;
+        height: 120px;
+        width: 90%;
+        border-radius: 15px;
+        margin: 140px 0px;
+        padding: 40px;
+        h1{
+        @extend %h1-brown;
+        }
+    }
+
+}
+
+
+.container-two{
+   
+    background-color: $brown-light;
+}
+
+.top-wrap{
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    background-color: $secondary-cream;
+    border-radius: 15px;
+    margin-bottom: 200px;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 119px rgba(0, 0, 0, 0.445) ;
+    .recipes-container{
+        flex-direction: column;
+    }
+    
+}
+
+.wrap-two {
+    margin-top: 200px;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px;
+}
+
+.others-container{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    box-shadow: inset 0px 0px 10px #3d120196;
+    .others-title{
+        background-color: white;
+        height: 60dvh;
+        width: 100%;
+        h1{
+            @extend %h1-brown;
+        }
+    }
+   
+    }
+
+.ownfood-container{
+    height: 90dvh;
+    width: 100%;
+    background-color: white;
+    background-image: url(../images/candy-background-pc.png);
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(17, 6, 1, 0.193);
+    .ownfood-text-container{
+        background-color: $brown-light;
+        width: 80%;
+        border-radius: 15px;
+        padding: 20px;
+        background-image: url(../images/sweet-wallpaper-pc.jpg);
+        background-size: cover;
+        box-shadow:  
+        0px 0px 10px rgba(182, 125, 125, 0.623), 
+        inset 0 0 0 1000px rgba(231, 181, 158, 0.39);
+        margin: 300px 0px 200px 0px;
+        
+        .ownfood-text{
+            color: $terciary-brown;
+            @extend %quicksand;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.363);
+        }
+    }
+
+    .create-link-container{
+        width: 100%;
+        margin-bottom: 200px;
+        background-color: transparent;
+        
+        .create-link{
+            @extend %quicksand;
+            text-align: center;
+            font-weight: 400;
+            padding: 20px;
+            border-radius: 15px;
+            width: 240px;
+            background-color: white;
+            box-shadow: 0px 0px 90px 20px rgba(255, 149, 149, 0.507);
+            border: none;
+            color: black;
+            text-decoration: none;
+            transition: 0.5s ease;
+        }
+        .create-link:hover{
+            @extend %zoom;
+            color: white;
+            background-color: rgba(255, 149, 149, 0.507);
+            transition: 0.5s ease;
+        }
+    }
+}
+
+.button-save{
+    @extend %quicksand;
+    font-weight: 700;
+    padding: 2px 8px;
+    width: 140px;
+    border-radius: 8px;
+    border: 1px solid $terciary-brown;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.541);
+    background-color: rgb(252, 242, 255);
+    transition: transform 0.8s ease;
+    font-size: 15px;
+}
+
+
+.button-save:hover{
+   background-color: antiquewhite;
+   transition: transform 0.8s ease;
+}
+
+.loading-container{
+    height: 100%;
+    width: 100%;
+
+
+}
+.loading{
+    background-image: url(../images/loading.gif);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 15px;
+    height: 90dvh;
+    width: 100%;
+}
+
+@media screen and (max-width:990px ) {
+    .top-wrap{
+        overflow-x: auto;
+    }
+    .recipes-container{
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 420px;
+        width: auto;
+        padding: 0px 30px;
+    }
+    .loading{
+        background-image: url(../images/loading.gif);
+        background-size: cover;
+        background-position: center center;
+        border-radius: 15px;
+        height: 40dvh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-height: 460px ) {
+    .top-wrap{
+        overflow-x: auto;
+    }
+    .recipes-container{
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 420px;
+        width: auto;
+        padding: 0px 30px;
+    }
+    .ownfood-container{
+        height: 140dvh !important;
+    }
+    
+}
+
+@media screen and (min-width:1260px) {
+    .loading{
+        background-image: url(../images/loading-two.gif);
+        background-size: cover;
+        background-position: center center;
+        border-radius: 15px;
+        height: 80dvh;
+        width: 100%;
+    }
+}

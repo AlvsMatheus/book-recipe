@@ -1,0 +1,174 @@
+@import '../colors/colors.scss';
+
+@font-face {
+    font-family: 'recipe';
+    src: url(/fonts/biscuit_recipe/BiscuitRecipeDemo.otf) format('opentype');
+    }
+
+.header-two-container{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    .header-two{
+        padding: 20px;
+        height: auto;
+        background-image: url(../images/preparation-header.jpg);
+        background-size: cover;
+        box-shadow: inset 0px 0px 0px 2000px rgba(0, 0, 0, 0.534);
+        nav{
+            width: 100%;
+            a{
+                @extend %quicksand;
+                @extend %shadow-basic;
+                background-color: transparent;
+                text-decoration: none;
+                border: 1px solid $secondary-cream;
+                color: $secondary-cream;
+                padding: 5px;
+                border-radius: 15px;
+                font-weight: 200;
+                transition:  1s ease;
+              }
+              a:hover{
+                background-color: transparent;
+                color: black;
+                font-size: 20px;
+                background-color: $secondary-cream;
+                transform: scale(1.0);
+              }
+        }
+        .header-two-title{
+            margin: 300px 0px;
+            h1{
+            font-family:'recipe', sans-serif;
+            font-size: 6rem;
+            color: $secondary-cream;
+            text-shadow: 10px 5px 4px $terciary-brown;
+            
+        }
+        div.line{
+                width: 80%;
+                height: 2px;
+                background-color: antiquewhite;
+                z-index: 1000;
+            }
+        }
+        
+
+    }
+
+    .tutorial-main{
+        width: 100%;
+        padding-bottom: 200px;
+        height: auto;
+        box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 0.685);
+        background-image: url(../images/brownbackground.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        article{
+            width: 80%;
+        }
+        .section-howcook{
+            height: auto;
+            width: 100%;
+            margin: 90px 0px;
+            h1{
+                @extend %quicksand;
+                font-size: 4rem;
+                color: $secondary-cream;
+                text-shadow: 10px 5px 4px $terciary-brown;
+                text-align: center;
+            }
+        }
+    }
+
+    .page-tutorial{
+        height: auto;
+        padding: 20px;
+        width: 60%;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.685);
+    }
+    .tutorial-recipe-name{
+        margin: 0px 0px 40px 0px;
+        .tutorial-h2-container{
+            width: 100%;
+            height: auto;
+        }
+        .line-two{
+            background-color: black;
+            height: 1px;
+            width: 50%;
+        }
+        h2{
+            @extend %quicksand;
+            color: $terciary-brown;
+            font-weight: bolder;
+            font-size: 2rem;
+            text-align: center
+        }
+        aside{
+            @extend %quicksand;
+            margin-top: 10px;
+            font-weight: 700;
+            color: $terciary-brown;
+        }
+    }
+    .tutorial-paragraph{
+        background-image: url(../images/brownbackground.jpg);
+        background-size: cover;
+        box-shadow: inset 0px 0px 0px 1000px rgba(0, 0, 0, 0.466);
+        width: 90%;
+        height: auto;
+        margin: 10px 0px 90px 0px;
+        padding: 20px;
+        border-radius: 15px;
+        p{
+            color: white !important;
+            text-align: center;
+            font-size: 18px;
+            color: black;
+            font-weight: 500;
+        }
+    }
+    .saved-recipe{
+        width: 100%;
+        margin: 20px 0px;
+        .saves{
+            background-color: rgb(35, 105, 14);
+            color: white;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        button{
+            border: 2px solid black;
+            padding: 10px;
+            width: 130px;
+            border-radius: 15px;
+            background-color: $secondary-cream;
+            font-size: 15px;
+            font-weight: 300;
+            transition: 0.5s ease;
+            &:hover{
+                @extend %zoom;
+                background-color: $terciary-brown;
+                color: white;
+                transition: 0.5s ease;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header-two-title{
+        margin: 300px 0px;
+        h1{
+        font-size: 3rem !important;
+    }
+    .header-two{
+        padding: 20px 5px 20px 20px !important;
+        height: auto;
+    }
+}
+}

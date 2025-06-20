@@ -1,0 +1,178 @@
+@import '../colors/colors.scss';
+
+@font-face {
+    font-family: 'recipe';
+    src: url(../fonts/biscuit_recipe/BiscuitRecipeDemo.otf) format('opentype');
+}
+
+
+.create-container{
+    margin: 150px 0px;
+    height: auto;
+    width: 100%;
+    background-color: white;    
+    .creating-container{
+        width: 70%;
+        padding: 50px;
+        height: 70%;
+        background-image: url(../images/candy-background-pc.png) ;
+        background-size: cover;
+        box-shadow: inset 0px 0px 0px 2000px rgba(92, 67, 71, 0.315);
+        border-radius: 15px;
+        .create-nav{
+            height: 10%;
+            width: 100%;
+            nav{
+                width: 90%;
+                border-bottom: 1px solid $primary-pink ;
+            }
+            h1{
+                font-family: 'recipe', sans-serif;
+                font-size: 50px;
+                color: $secondary-cream;
+                text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.699);
+            }
+            a{
+                
+                text-decoration: none;
+                color: black;
+                font-size: 1rem;
+                @extend %quicksand;
+                font-weight: 400;
+            }
+            @extend %back-homepage;
+        }
+        .form-create-container{
+            margin-top: 50px;
+            height: 80%;
+            width: 100%;
+            gap: 200px;
+            form{
+                width: 60%;
+                label{
+                    @extend %quicksand;
+                    color: $secondary-cream;
+                    font-weight: 700;
+                    font-size: 25px;
+                    text-align: center;
+                    padding-right: 50px;
+                }
+                input{
+                    padding: 10px;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: $secondary-cream;
+                    color: black;
+                    @extend %quicksand;
+                    font-weight: 700;
+                    &:hover{
+                        background-color: $primary-pink;
+                        transition: all 0.3s ease-in-out;
+                       
+                    }
+                    &:focus{
+                        outline: none;
+                        background-color: rgb(252, 157, 173);
+                        color: black;
+                    }
+                }
+                #itutorial{
+                    margin-top: 50px;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    border-radius: 15px;
+                    background-color: $secondary-cream;
+                    color: black;
+                    font-size: 20px;
+                    @extend %quicksand;
+                    font-weight: 700;
+                    &:hover{
+                        background-color: $primary-pink;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:focus{
+                        outline: none;
+                        background-color: rgb(252, 157, 173);
+                    }
+                }
+            }
+        }
+    }
+   
+    .write-recipe{
+        margin-top: 40px;
+        width: 100%;
+        min-width: 300px;
+        max-width: 600px;
+        height: 350px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .button-create{
+        @extend %quicksand;
+        font-weight: 100;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: $secondary-cream;
+        border: none;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            @extend %zoom;
+            color: white;
+            background-color: rgba(252, 157, 173, 0.699);
+            transition: all 0.3s ease-in-out;
+        }
+        
+    }
+
+    }
+
+@media screen and (max-width: 768px) {
+    .create-container{
+        margin: 0px;
+    }
+    .creating-container{
+        width: 100% !important;
+        border-radius: 0px !important;
+        padding: 20px !important;
+    }
+    .create-nav{
+        width: 100%;
+        width: 100%; 
+        nav{
+            width: 90%;
+            border-bottom: 1px solid $primary-pink ;
+        }
+      h1{
+            font-size: 35px !important;
+            white-space: nowrap;
+            margin: 0px !important;
+        }
+        a{
+            background-color: transparent;
+            border: none;
+            white-space: nowrap;
+            font-size: 0.8rem !important;
+        }
+        .create-back{
+            padding: 10px !important;
+
+        }
+    }
+    form{
+        width: 60%;
+        label{
+            white-space: nowrap;
+            color: $secondary-cream;
+            font-weight: 700;
+            font-size: 25px;
+            text-align: center;
+            padding-right: 50px;
+        }}
+
+    
+}
+
